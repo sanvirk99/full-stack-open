@@ -128,3 +128,11 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# addition for this project
+# Ignore everything
+*
+
+# Except for source folder and HTML files
+!src/
+!package.json
