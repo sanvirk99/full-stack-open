@@ -133,6 +133,6 @@ dist
 # Ignore everything
 *
 
-# Except for source folder and HTML files
-!src/
-!package.json
+# Unignore src folder and package.json files
+!**/src/
+!**/package.json
