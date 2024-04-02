@@ -129,10 +129,4 @@ dist
 .yarn/install-state.gz
 .pnp.*
 
-# addition for this project
-# Ignore everything
-*
 
-# Unignore src folder and package.json files
-!**/src/
-!**/package.json
