@@ -1,4 +1,4 @@
-#root {
+/* #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
@@ -39,4 +39,28 @@
 
 .read-the-docs {
   color: #888;
+}
+ */
+
+ 
+.notification {
+  border: 2px solid rgb(52, 132, 69);
+  border-width: 0.1em;
+  padding: 0.2em;
+  border-radius: 0.2em;
+  background-color: #eaf4ea;
+  color: rgb(52, 132, 69);
+  text-align: left;
+  font-size: 2em;
+}
+
+.errorNotification {
+  border: 2px solid rgb(214, 35, 29);
+  border-width: 0.1em;
+  padding: 0.2em;
+  border-radius: 0.2em;
+  background-color: #f3edea;
+  color: rgb(214, 35, 29);
+  text-align: left;
+  font-size: 2em;
 }
