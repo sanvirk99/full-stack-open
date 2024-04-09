@@ -45,7 +45,7 @@ const CountryInfo=(props) => {
           return data.capital
         })
         .then((capital)=>{
-          axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${capital}&appid=${import.meta.env.VITE_API_KEY}`)
+          axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${capital}&appid=${import.meta.env.VITE_SOME_KEY}`)
           .then(response=>{
             console.log(response.data)
             console.log(response.data.wind['speed'], 'm/s')
@@ -105,12 +105,20 @@ const CountryInfo=(props) => {
 
 const List=(props)=>{
   const list=props.list;
+  const setSearch=props.setSearch;
+
+  const handelClick=(event)=>{
+    console.log(event.target.value)
+    setSearch(event.target.value.toLowerCase())
+    
+  }
+  
 
   return(
     <div>
       {
       list.map(item=>{
-        return <p key={item}>{item}</p>
+        return <p key={item}>{item} <button value={item} onClick={handelClick}>show</button></p>
       })
       }
     </div>
@@ -163,12 +171,13 @@ const Filter = (props) => {
     setSearch(event.target.value.toLowerCase())
   }
 
+
   return (
 
     <div>
       find countries<input onChange={handelInput} value={search}/>
       <CountryInfo country={country}/>
-      <List list={list}/>
+      <List list={list} setSearch={setSearch}/>
       <p>{msg}</p>
     </div>
   )
